@@ -120,3 +120,110 @@ div.scrollingDiv
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+
+/* O card do botão de Registrar Livro*/
+dialog {
+    margin: auto;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    width: 400px;
+    text-align: left;
+}
+
+.modalLivro{
+    width: 900px;
+    border: none;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+.modalLivro::backdrop{
+    background: rgba(0,0,0,0.4);
+}
+
+.modalContainer{
+    display: flex;
+    gap: 30px;
+}
+
+.capaLivro{
+    width: 200px;
+    height: 310px;
+    background: #d9d9d9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.formLivro{
+    flex:1;
+    grid-column: 2;
+}
+
+.linha{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    margin-bottom:10px;
+
+}
+
+.campo label{
+    font-weight: 600;
+    margin-bottom:5px;
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+    border:none;
+    background:#ececec;
+    padding:10px;
+    border-radius:20px;
+}
+
+.sinopse textarea{
+    height:80px;
+    resize:none;
+
+}
+
+.pequeno{
+    max-width:120px;
+}
+
+.botoes{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:10px;
+    color: #000;
+}
+
+.btnRegistrar{
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    color:white;
+    cursor:pointer;
+}
+
+.modalLivro .fecharModal {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    border: none;
+    background: none;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+}

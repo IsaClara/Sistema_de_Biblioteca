@@ -106,7 +106,97 @@
             <div class="scrollingDiv">
     <div class="sessaoLivro">
         <h1>Todos os Livros</h1>
-        <button>Registrar livro</button>
+        <button id="botaoregistrarlivro">Registrar livro</button>
+
+        <dialog class="modalLivro">
+
+    <button class="fecharModal">✕</button>
+
+    <div class="modalContainer">
+
+        <!-- Área da capa -->
+        <div class="capaLivro">
+    <!-- Input escondido -->
+    <input type="file" id="uploadCapa" accept="image/*" style="display: none;" />
+
+    <!-- SVG clicável -->
+    <span id="clicarCapa">
+        <svg width="38" height="42" viewBox="0 0 38 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 34L16 24L19.76 27.76C18.66 29.58 18 31.72 18 34H6ZM12 17C12 15.34 10.66 14 9 14C7.34 14 6 15.34 6 17C6 18.66 7.34 20 9 20C10.66 20 12 18.66 12 17ZM18.18 36H4V4H18V14H28V22.18C28.66 22.08 29.32 22 30 22C30.68 22 31.34 22.08 32 22.18V12L20 0H4C2.93913 0 1.92172 0.421427 1.17157 1.17157C0.421427 1.92172 0 2.93913 0 4V36C0 38.22 1.78 40 4 40H19.62C18.92 38.78 18.42 37.44 18.18 36ZM28 26V32H22V36H28V42H32V36H38V32H32V26H28Z" fill="black"/>
+        </svg>
+    </span>
+</div>
+
+<!-- Link para o script separado -->
+
+        <!-- Formulário -->
+        <form class="formLivro">
+
+            <div class="linha">
+                <div class="campo">
+                    <label>ISBN</label>
+                    <input type="text" placeholder="Digite o ISBN do livro...">
+                </div>
+
+                <div class="campo">
+                    <label >Ano de publicação</label>
+                    <input type="date" placeholder="Digite o ano de publicação...">
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Título</label>
+                <input type="text" placeholder="Digite o título do livro...">
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label>Editora</label>
+                    <select>
+                        <option>Editora...</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Categoria</label>
+                    <select>
+                        <option>Categoria...</option>
+                    </select>
+                </div>
+
+                <div class="campo pequeno">
+                    <label>Nº Páginas</label>
+                    <input type="number" placeholder="...">
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="campo">
+                    <label>Autor</label>
+                    <input type="text" placeholder="Digite o nome do autor...">
+                </div>
+
+                <div class="campo pequeno">
+                    <label>Nº Exemplares</label>
+                    <input type="number" placeholder="...">
+                </div>
+            </div>
+
+            <div class="campo sinopse">
+                <label>Sinopse</label>
+                <textarea placeholder="Digite a sinopse do livro..."></textarea>
+            </div>
+
+            <div class="botoes">
+                <button type="submit" class="btnRegistrar">Registrar livro</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</dialog>
+        
     </div>
 
             <div class="container-cards">
@@ -284,6 +374,10 @@
         </div>
         </section>
     </div>
+        <!-- pra funcionar a abertura do card -->
+        <script src="funcaobotaolivro.js"></script> 
+        <!-- Link para o script separado -->
+        <script src="uploadCapa.js"></script>
 </body>
 
 </html>
