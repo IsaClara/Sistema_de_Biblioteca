@@ -30,7 +30,7 @@
   position: absolute;
   left: 0.75rem;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   width: 20px;
   height: 20px;
   color: #727272;

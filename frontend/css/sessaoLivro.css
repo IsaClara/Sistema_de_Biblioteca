@@ -1,0 +1,122 @@
+/* Container do título e botão */
+.sessaoLivro {
+    display: flex;
+    align-items: center;           /* alinha verticalmente o conteúdo */
+    justify-content: space-between; /* título e botão com espaço entre eles */
+    gap: 20px;                     /* espaço entre título e botão */
+    flex-wrap: wrap;               /* quebra para mobile */
+    margin: 1% 2%;                 /* reduz o espaçamento geral */
+    padding: 0.5rem 0;             /* ajuste o padding do container */
+}
+
+/* Título */
+.sessaoLivro h1 {
+    color: #2C2725;
+    margin: 0;                     /* remove margin para controle melhor */
+    padding: 0;                    /* remove padding extra */
+    font-size: 2rem;               /* ajuste o tamanho do título conforme necessário */
+}
+
+/* Botão */
+.sessaoLivro button {
+    background-color: #8C6046;
+    color: white;
+    display: block;
+    padding: 10px 20px;            /* padding maior horizontal */
+    border-radius: 35px;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;               /* ajuste o tamanho do título conforme necessário */
+    border-radius: 35px;
+    margin: 0; 
+    border: none; /* tira a sombra do botao*/
+   
+}
+   
+
+div.scrollingDiv
+{
+   overflow:auto;
+}
+
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;           
+    gap: 20px;                 
+    justify-content: space-between;    
+}
+
+/* Card individual */
+
+/* Card individual */
+.cardlivro {
+    display: flex;
+    flex-direction: row;        /* Organiza a imagem à esquerda e o texto à direita */
+    align-items: flex-start;    /* Alinha a imagem e o texto ao início */
+    width: calc(40% - 10px);     /* Dois cards por linha, ajustando o gap */
+    max-width: auto;            /* Largura máxima do card */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombras nos cards */
+    overflow: hidden;
+    background: #fff;
+    gap: 10px;                   /* Espaço menor entre a imagem e o texto dentro do card */
+    margin: 25px;                /* Menor margem entre os cards */
+    padding: 15px;               /* Espaçamento interno do card */
+}
+
+/* Media Query para telas menores (até 768px) */
+@media (max-width: 768px) {
+    .cardlivro {
+        width: calc(50% - 10px); /* 2 cards por linha em telas menores */
+    }
+}
+
+/* Media Query para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    .cardlivro {
+        width: 100%;  /* 1 card por linha em telas pequenas */
+    }
+}
+
+.cardlivro button {
+    background-color: #8C6046;
+    color: white;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 120px;
+    margin-top: 10%;
+    border: none;    /* tira a sombra do botao*/
+
+    
+}
+
+/* Imagem */
+.cardlivro img {
+    width: 150px;              
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Texto do card */
+.textotitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    padding: 10px 0;
+    margin: 0;
+    flex: 1;                      
+}
+
+/* Título */
+.textotitulo h2 {
+    margin-bottom: 10px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
