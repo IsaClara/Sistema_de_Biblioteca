@@ -28,7 +28,7 @@
 }
 
 /*main*/
-.mainLivros {
+.mainPerfil {
   flex: 5.5;
-  background-color: pink;
+  background-color: #ffffff;
 }

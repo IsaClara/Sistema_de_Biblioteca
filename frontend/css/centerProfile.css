@@ -1,0 +1,72 @@
+.img-perfil {
+    position: absolute;
+    left: 780px;
+    top: 272px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid blue;
+    border-radius: 50%;
+    z-index: 99; 
+}
+
+#circle {
+    position: absolute;
+    left: 805.5px;
+    top: 320px;
+    width: 56px;
+    height: 56px;
+    background-color: #F0E6FC;
+    margin: 100px;
+    border-radius: 100px;
+    z-index: 99;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.vector-document{ 
+    position: absolute;
+    left: 15px;
+    top: 11px;
+    width: 32px;
+    height: 32px;
+
+    z-index: 100;
+}
+
+.nameUser{
+    font-size: 48px;
+    position: absolute;
+    left: 700px;
+    top: 500px;
+    margin: 0;
+}
+
+.cargoUser{
+    font-size: 24px;
+    position: absolute; 
+    left: 765px;        
+    top: 560px;         
+    color: #6C6C6C;
+    margin: 0;
+}
+
+.emailUser{
+    font-size: 24px;
+    position: absolute; 
+    left: 675px;        
+    top: 600px;         
+    color: #6C6C6C;
+    margin: 0;
+}
+
+.IdUser{
+    font-size: 24px;
+    position: absolute; 
+    left: 835px;       
+    top: 630px;         
+    color: #6C6C6C;
+    margin: 0;
+}
+
+#botaoAlterarSenha {
+
+}
