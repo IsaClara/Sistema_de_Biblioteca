@@ -15,7 +15,7 @@
     top: 320px;
     width: 56px;
     height: 56px;
-    background-color: #F0E6FC;
+    background-color: #F1E4CC;
     margin: 100px;
     border-radius: 100px;
     z-index: 99;
@@ -28,7 +28,6 @@
     top: 11px;
     width: 32px;
     height: 32px;
-
     z-index: 100;
 }
 
@@ -73,7 +72,7 @@
     top: 575px;
     width: 391px;
     height: 60px;
-    background-color: #F0E6FC;
+    background-color: #8C6046;
     margin: 100px;
     border-radius: 100px;
     z-index: 99;
