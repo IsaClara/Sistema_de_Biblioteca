@@ -8,14 +8,30 @@ const campoBusca = document.getElementById("buscarUsuario");
 let usuarioEditando = null;
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+/* GERAR ID PEQUENO */
+function gerarId(lista) {
+  if (lista.length === 0) return 1;
+  return lista[lista.length - 1].id + 1;
+}
+
+/* RENDERIZAR TABELA */
 function renderTabela(lista = usuarios) {
   tabela.innerHTML = "";
+
+  if (lista.length === 0) {
+    tabela.innerHTML = `
+      <tr>
+        <td colspan="7">Nenhum usuário cadastrado</td>
+      </tr>
+    `;
+    return;
+  }
 
   lista.forEach((user, index) => {
     const linha = document.createElement("tr");
 
     linha.innerHTML = `
-        <td>${index + 1}</td>
+        <td>${user.id}</td>
         <td>${user.matricula}</td>
         <td>${user.nome}</td>
         <td>${user.curso}</td>
@@ -40,6 +56,7 @@ botaoRegistrar.onclick = function () {
 botaoFechar.onclick = function () {
   usuarioEditando = null;
   form.reset();
+  botaoRegistrar.textContent = "Registrar usuário";
   modal.close();
 };
 
@@ -47,16 +64,36 @@ botaoFechar.onclick = function () {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const nome = document.getElementById("nomeUsuario").value;
-  const matricula = document.getElementById("matriculaUsuario").value;
-  const curso = document.getElementById("cursoUsuario").value;
-  const telefone = document.getElementById("telefoneUsuario").value;
+  let nome = document.getElementById("nomeUsuario").value.trim();
+  let matricula = document.getElementById("matriculaUsuario").value;
+  let curso = document.getElementById("cursoUsuario").value;
+  let telefone = document
+    .getElementById("telefoneUsuario")
+    .value.replace(/\D/g, "");
+
+  if (!nome) {
+    alert("Digite um nome válido.");
+    return;
+  }
+
+  const matriculaExiste = usuarios.some((usuario, index) => {
+    return usuario.matricula === matricula && index !== usuarioEditando;
+  });
+
+  if (matriculaExiste) {
+    alert("Já existe um usuário com essa matrícula.");
+    return;
+  }
 
   const usuario = {
-    nome: nome,
-    matricula: matricula,
-    curso: curso,
-    telefone: telefone,
+    id:
+      usuarioEditando !== null
+        ? usuarios[usuarioEditando].id
+        : gerarId(usuarios),
+    nome,
+    matricula,
+    curso,
+    telefone,
     situacao: "Ativo",
   };
 
@@ -72,6 +109,7 @@ form.addEventListener("submit", function (e) {
   renderTabela();
 
   form.reset();
+  botaoRegistrar.textContent = "Registrar usuário";
   modal.close();
 });
 
@@ -85,6 +123,8 @@ function editarUsuario(index) {
   document.getElementById("telefoneUsuario").value = usuario.telefone;
 
   usuarioEditando = index;
+
+  botaoRegistrar.textContent = "Salvar edição";
 
   modal.showModal();
 }
@@ -116,5 +156,4 @@ campoBusca.addEventListener("input", function () {
   renderTabela(filtrados);
 });
 
-/* CARREGAR TABELA AO ABRIR A PÁGINA */
 renderTabela();

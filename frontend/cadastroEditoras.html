@@ -45,8 +45,8 @@
                         </svg>
                     </label>
                     <ul class="itensEscondidos">
-                        <li><a href="#">Usuários</a></li>
-                        <li><a href="cadastroEditoras.html">Editoras</a></li>
+                        <li><a href="cadastroUsuarios.html">Usuários</a></li>
+                        <li><a href="#">Editoras</a></li>
                     </ul>
                 </div>
 
@@ -76,7 +76,7 @@
                 </div>
             </nav>
             <main>
-                <h1>Usuários</h1>
+                <h1>Editoras</h1>
                 <div class="buscarEregistrar">
                     <div class="campoBusca">
                         <span class="iconeBusca">
@@ -86,9 +86,9 @@
                                 <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
                             </svg>
                         </span>
-                        <input type="search" placeholder="Pesquisar usuário..." id="buscarUsuario">
+                        <input type="search" placeholder="Pesquisar editora..." id="buscarEditora">
                     </div>
-                    <button class="botaoregistrar">Registrar Usuário</button>
+                    <button class="botaoregistrar">Registrar Editora</button>
                 </div>
 
                 <!-- Tabela de registros -->
@@ -96,15 +96,15 @@
                     <thead>
                         <tr>
                             <th class="tabelaSuperior">ID</th>
-                            <th class="tabelaSuperior">Matricula </th>
+                            <th class="tabelaSuperior">CNPJ </th>
                             <th class="tabelaSuperior">Nome</th>
-                            <th class="tabelaSuperior">Curso</th>
+                            <th class="tabelaSuperior">ISBN</th>
                             <th class="tabelaSuperior">Telefone</th>
-                            <th class="tabelaSuperior">Situação</th>
+                            <th class="tabelaSuperior">Email</th>
                             <th class="tabelaSuperior">Editar</th>
                         </tr>
                     </thead>
-                    <tbody id="tabelaUsuarios"></tbody>
+                    <tbody id="tabelaEditora"></tbody>
                 </table>
 
     </div>
@@ -112,36 +112,40 @@
     </section>
     <dialog id="popupRegistrar">
         <button class="botaoFechar">X</button>
-        <form class="formPopUp" id="formUsuario">
+        <form class="formPopUp" id="formEditora">
             <span class="campoInteiro">
                 <label>Nome</label>
-                <input placeholder="Digite o nome do usuário..." type="text" id="nomeUsuario" required>
+                <input placeholder="Digite o nome da editora..." type="text" id="nomeEditora" required>
             </span>
             <div class="linha">
                 <span>
-                    <label>Matricula</label>
-                    <input placeholder="Digite a matricula..." type="text" id="matriculaUsuario" required>
+                    <label>CNPJ</label>
+                    <input placeholder="Digite o CNPJ..." type="text" id="CNPJEditora" required>
                 </span>
                 <span>
-                    <label>Curso</label>
-                    <input placeholder="Digite o curso..." type="text" id="cursoUsuario" required>
+                    <label>ISBN</label>
+                    <input placeholder="Digite o ISBN..." type="text" id="ISBNEditora" required>
                 </span>
             </div>
-            <div class="linhaTelefone">
+            <div class="linha">
                 <span>
                     <label>Telefone</label>
-                    <input placeholder="Digite o telefone..." type="tel" id="telefoneUsuario">
+                    <input placeholder="Digite o telefone..." type="tel" id="telefoneEditora">
                 </span>
-                <button class="botaoregistrar" type="submit">Registrar usuário</button>
+                <span>
+                    <label>Email</label>
+                    <input placeholder="Digite o email..." type="email" id="EmailEditora" required>
+                </span>
             </div>
+            <button class="botaoregistrar" type="submit">Registrar Editora</button>
         </form>
     </dialog>
 
 
     <!-- script para mudar a foto de perfil do user -->
     <script src="js/uploadPerfil.js"></script>
-    <!-- script para configurar a tabela de usuários -->
-    <script src="js/usuarios.js"></script>
+    <!-- script para tela de registro de editora -->
+    <script src="js/editoras.js"></script>
 </body>
 
 </html>
