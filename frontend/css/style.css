@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "./topBarProfile.css";
+@import "./topBar.css";
+@import "./sideBar.css";
+
 /* ============================= */
 /* CONFIGURAÇÕES GERAIS */
 /* ============================= */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   --paddingGeral: 1.5rem;
@@ -11,7 +14,7 @@
   --corMarrom: #8c6046;
   --corBege: #f1e4cc;
   --corPreto: #2c2725;
-  -corverde: #9fca32;
+  --corverde: #9fca32;
   --corVerdeClaro: #ddffcd;
   --corVermelho: #ae4e3f;
   --corRosa: #ffcdd2;
