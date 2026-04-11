@@ -7,8 +7,26 @@
 /* ============================= */
 
 .sideBar {
-  flex: 0.8;
   padding: 2rem var(--paddingGeral);
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: var(--larguraSidebar);
+  min-height: 100vh;
+
+  overflow-y: auto;
+}
+.mainDiv {
+  margin-left: 250px;
+}
+
+.sideBar nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .tituloPaginas {
@@ -102,4 +120,8 @@
 /* Aqui faz a seta girar */
 .dropCheck:checked + .botaoSideBar .seta {
   transform: rotate(180deg);
+}
+
+.sair {
+  margin-top: auto;
 }

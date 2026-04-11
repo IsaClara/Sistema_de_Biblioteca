@@ -9,6 +9,7 @@
 
 :root {
   --paddingGeral: 1.5rem;
+  --larguraSidebar: 250px;
 
   /*Paleta de cores*/
   --corMarrom: #8c6046;
@@ -44,5 +45,5 @@
 
 /*main*/
 .mainDiv {
-  flex: 5.5;
+  flex: 1;
 }

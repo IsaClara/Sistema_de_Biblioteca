@@ -7,24 +7,30 @@
   width: 100%;
 }
 
+.topBarProfile {
+  position: relative;
+  height: 180px; /* controla o tamanho da faixa marrom */
+  background-color: var(--corBege); /* ou marrom se for o caso */
+}
+
 .conteudoProfile {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 7.5rem;
+  margin-top: 2rem;
 }
 .perfilHeader {
   position: absolute;
   left: 50%;
-  bottom: -6.25rem;
+  bottom: -3rem;
   transform: translateX(-50%);
   display: inline-block;
 }
 
 .img-perfil {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: 5px solid var(--corMarrom);
   border-radius: 50%;
   object-fit: cover;
@@ -58,17 +64,17 @@
 }
 
 .nameUser {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--corPreto);
-  margin: 0;
+  margin: 2rem 0 0.5rem 0;
 }
 
 .cargoUser {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--corCinzaEscuro);
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 .emailUser {
@@ -78,27 +84,19 @@
   margin: 0;
 }
 
-.IdUser {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--corCinzaEscuro);
-  margin: 0;
-}
-
-#botaoAlterarSenha {
-  width: 24.4rem;
-  height: 60px;
+.botaoPerfil {
+  margin: 2rem 0 1.5rem 0;
+  padding: 0.5rem 6rem;
   background-color: var(--corMarrom);
-  margin: 6.25rem;
-  border-radius: 6.25rem;
   border: none;
-  font-size: 1.5rem;
+  border-radius: 6.25rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--corBranco);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-#botaoAlterarSenha:hover {
+.botaoPerfil:hover {
   background-color: var(--corPreto);
 }
