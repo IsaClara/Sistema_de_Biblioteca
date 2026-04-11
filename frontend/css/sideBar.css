@@ -7,14 +7,14 @@
 /* ============================= */
 
 .sideBar {
-  flex: 1;
-  padding: 2rem 0;
+  flex: 0.8;
+  padding: 2rem var(--paddingGeral);
 }
 
 .tituloPaginas {
   font-weight: 600;
-  font-size: 2.5rem;
-  padding: 1rem var(--paddingGeral);
+  font-size: 2rem;
+  padding: 1rem 0;
   color: var(--corPreto);
 }
 
@@ -22,12 +22,12 @@
   font-weight: 600;
   font-size: 1.25rem;
   color: var(--corPreto);
-  padding: 1rem var(--paddingGeral);
+  padding: 1rem 0;
   background-color: var(--corBranco);
 }
 
 .sideBarBotao {
-  padding: 1rem var(--paddingGeral);
+  padding: 1rem 0;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -54,12 +54,14 @@
   display: none;
 }
 .botaoSideBar {
+  padding: 1rem 0;
   display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1rem var(--paddingGeral);
-  cursor: pointer;
+  flex-direction: row;
+  gap: 0.5rem;
+
   font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
   color: var(--corPreto);
 
   transition: all 0.3s ease;
@@ -70,7 +72,7 @@
 
 /* Faz a seta ir pra direita */
 .seta {
-  margin-left: 0.5rem;
+  margin-left: auto;
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
