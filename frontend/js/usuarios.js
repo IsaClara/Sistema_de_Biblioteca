@@ -1,5 +1,6 @@
 const tabela = document.getElementById("tabelaUsuarios");
-const botaoRegistrar = document.querySelector(".botaoregistrar");
+const abrirModal = document.getElementById("abrirModal");
+const botaoRegistrarPopUp = document.getElementById("botao-registrar");
 const modal = document.getElementById("popupRegistrar");
 const botaoFechar = document.querySelector(".botaoFechar");
 const form = document.getElementById("formUsuario");
@@ -48,7 +49,7 @@ function renderTabela(lista = usuarios) {
 }
 
 /* ABRIR POPUP */
-botaoRegistrar.onclick = function () {
+abrirModal.onclick = function () {
   modal.showModal();
 };
 
@@ -56,7 +57,7 @@ botaoRegistrar.onclick = function () {
 botaoFechar.onclick = function () {
   usuarioEditando = null;
   form.reset();
-  botaoRegistrar.textContent = "Registrar usuário";
+  botaoRegistrarPopUp.textContent = "Registrar usuário";
   modal.close();
 };
 
@@ -109,7 +110,7 @@ form.addEventListener("submit", function (e) {
   renderTabela();
 
   form.reset();
-  botaoRegistrar.textContent = "Registrar usuário";
+  botaoRegistrarPopUp.textContent = "Registrar usuário";
   modal.close();
 });
 
@@ -124,7 +125,7 @@ function editarUsuario(index) {
 
   usuarioEditando = index;
 
-  botaoRegistrar.textContent = "Salvar edição";
+  botaoRegistrarPopUp.textContent = "Salvar edição";
 
   modal.showModal();
 }
@@ -157,3 +158,5 @@ campoBusca.addEventListener("input", function () {
 });
 
 renderTabela();
+window.editarUsuario = editarUsuario;
+window.apagarUsuario = apagarUsuario;

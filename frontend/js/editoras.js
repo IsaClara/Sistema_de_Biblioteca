@@ -1,9 +1,10 @@
 const tabela = document.getElementById("tabelaEditora");
-const botaoRegistrar = document.querySelector(".botaoregistrar");
 const modal = document.getElementById("popupRegistrar");
 const botaoFechar = document.querySelector(".botaoFechar");
 const form = document.getElementById("formEditora");
 const campoBusca = document.getElementById("buscarEditora");
+const botaoAbrirModal = document.getElementById("abrirModal");
+const botaoRegistrarPopUp = document.getElementById("botao-registrar");
 
 let editoraEditando = null;
 let editoras = JSON.parse(localStorage.getItem("editoras")) || [];
@@ -48,7 +49,7 @@ function renderTabela(lista = editoras) {
 }
 
 /* ABRIR POPUP */
-botaoRegistrar.onclick = function () {
+botaoAbrirModal.onclick = function () {
   modal.showModal();
 };
 
@@ -56,7 +57,7 @@ botaoRegistrar.onclick = function () {
 botaoFechar.onclick = function () {
   editoraEditando = null;
   form.reset();
-  botaoRegistrar.textContent = "Registrar editora";
+  botaoRegistrarPopUp.textContent = "Registrar editora";
   modal.close();
 };
 
@@ -110,7 +111,7 @@ form.addEventListener("submit", function (e) {
   renderTabela();
 
   form.reset();
-  botaoRegistrar.textContent = "Registrar editora";
+  botaoRegistrarPopUp.textContent = "Registrar editora";
   modal.close();
 });
 
@@ -126,7 +127,7 @@ function editarEditora(index) {
 
   editoraEditando = index;
 
-  botaoRegistrar.textContent = "Salvar edição";
+  botaoRegistrarPopUp.textContent = "Salvar edição";
 
   modal.showModal();
 }
